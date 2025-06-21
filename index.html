@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&family=Text+Me+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <section class="heading-section">
+        <div class="container" id="header-container">
+            <p class="heading">Music Player</p>
+            <div class="nav-container">
+                <ul class="header-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="allSongs.html">All Songs</a></li>
+                </ul>
+            </div>
+            <div class="head-dropdown">
+                <button class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="index.html">Home</a>
+                    <a href="allSongs.html">All Songs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main>
+        <section class="audio-section">
+            <div class="container" id="audio-control">
+                <div class="disc-container">
+                    <img src="Music-Disc.png" alt="music" class="Music-Disc">
+                </div>
+                <div id="controls">
+                    <div id="songTitle">No song playing</div>
+                    <input type="range" id="seekbar" value="0" min="0" max="100">
+                    <div class="control-btn-container">
+                        <button class="control-btns" id="prevBtn">⏮️ Prev</button>
+                        <button class="control-btns" id="playBtn">▶️ Play</button>
+                        <button class="control-btns" id="nextBtn">⏭️ Next</button>
+                    </div>
+                </div>
+
+                <audio id="audio" preload="metadata"></audio>
+            </div>
+        </section>
+        <section class="input-section">
+            <div class="container" id="input-container">
+                <div class="input-div">
+                    <h1 class="content-head">Add your Song from here.</h1>
+                    <input type="file" id="fileInput" multiple accept="audio/*">
+                    <div class="file-display">🎵 Choose a song</div>
+                    <p class="note">
+                        <span style="font-weight: bold;">Note: </span>Select your downloaded songs and You
+                        can play your music in your way.
+                    </p>
+                </div>
+                <div class="canvas-box">
+                    <canvas id="musicCanvas"></canvas>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

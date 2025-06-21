@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+#tsparticles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+}
+
+body>*:not(#tsparticles) {
+    position: relative;
+    z-index: 1;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#header-container {
+    width: 100%;
+    padding: 1% 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: #111826;
+    position: relative;
+}
+
+.heading {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 250%;
+    color: #38b6ff;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 30%;
+    visibility: visible;
+}
+
+.header-nav {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.header-nav>li {
+    font-size: 120%;
+    margin-right: 5%;
+    white-space: nowrap;
+    list-style-type: none;
+}
+
+li>a {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 120%;
+    color: #38b6ff;
+    text-decoration: none;
+}
+
+.head-dropdown {
+    visibility: collapse;
+    display: none;
+}
+
+.dropdown-content {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex-direction: column;
+    position: absolute;
+    top: 78%;
+    right: 0;
+    width: 30vw;
+    border-radius: 10px;
+    visibility: collapse;
+    display: none;
+    background-color: #a5acb9;
+    height: max-content;
+}
+.dropdown-content > a{
+    width: 100%;
+    padding: 5% 5%;
+    font-size: 120%;
+    border-radius: 10px;
+    color: #111826;
+    text-decoration: none;
+}
+.dropdown-content a:hover{
+    background-color: #858587;
+}
+.menu-btn {
+    font-size: 200%;
+    background: none;
+    border: none;
+    outline: none;
+    color: #c9d9ff;
+}
+
+.head-dropdown:hover .dropdown-content {
+    visibility: visible;
+    display: flex;
+}
+
+
+
+#allSongs-container {
+    width: 98%;
+    flex-direction: column;
+}
+
+.songs-heading {
+    font-family: "National Park", sans-serif;
+    width: max-content;
+    font-size: 250%;
+    color: aliceblue;
+    margin-bottom: 4%;
+}
+
+.songs-container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+ul {
+    width: 100%;
+}
+
+li {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: row;
+}
+
+.songs-ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.songs-ul>li {
+    width: 80%;
+}
+
+.song {
+    width: 90%;
+    /* margin-bottom: 2%; */
+    font-size: 130%;
+    font-family: "Text Me One", sans-serif;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    justify-self: center;
+    flex-direction: row;
+    border-radius: 20px;
+    background-color: #4aa5f420;
+    box-shadow:
+        0 0 10px rgb(140, 214, 248);
+    margin-bottom: 2%;
+    padding: 1% 2%;
+}
+
+.icon {
+    width: max-content;
+    margin: 0.5% 2%;
+    font-size: 120%;
+}
+
+
+@media only screen and (max-width: 1250px) {
+    .header-nav {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .heading {
+        margin: 1% auto;
+    }
+
+    #header-container {
+        margin-bottom: 2%;
+    }
+
+    .header-nav {
+        width: 100%;
+    }
+
+    .songs-container {
+        width: 90%;
+    }
+
+    .songs-ul>li {
+        width: 100%;
+
+    }
+
+    .song {
+        font-size: 110%;
+    }
+
+    .icon {
+        font-size: 100%;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .nav-container {
+        visibility: collapse;
+        display: none;
+    }
+    .head-dropdown {
+        visibility: visible;
+        display: block;
+    }
+    .songs-heading{
+        font-size: 180%;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .heading-section {
+        margin-bottom: 4%;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+
+    .songs-container {
+        width: 95%;
+    }
+
+    .songs-ul>li {
+        width: 100%;
+
+    }
+
+    .song, .icon {
+        font-size: 90%;
+    }
+}
+
+@media only screen and (max-width: 460px){
+    .songs-container {
+        width: 100%;
+    }
+
+    .songs-ul>li {
+        width: 100%;
+
+    }
+
+    .song, .icon {
+        font-size: 70%;
+    }
+    .icon{
+        margin: 0.5% 2%;
+    }
+}
