@@ -44,4 +44,8 @@ If you have any feedback, feature suggestions, or encounter any issues, feel fre
 ## 🤝 Contributing
 Contributions are welcome! If you'd like to improve this project, feel free to fork the repo and submit a pull request. Any enhancements, bug fixes, or feature additions are appreciated
 
+## 🧪 Live Preview
+You can explore the live version of this music player on GitHub Pages:
+🔗 https://jineshkhalas.github.io/Music-Player/
+
 
