@@ -1,13 +1,10 @@
-# 🎵 Responsive Music Player Web App
+# 🎵 Music Player Web App
 
-A responsive and lightweight **Music Player** web application built using **HTML**, **CSS**, and **Core JavaScript**. 
-<br>
-This player allows users to upload their downloaded songs, store them in the browser, and play them anytime directly within the app.
-
+A simple Music Player Web App , Allowing users to play their device songs.
 
 ## 📋 Description
 
-ThiThis is a fully responsive music player web application developed using HTML, CSS, and Vanilla JavaScript. 
+A responsive and lightweight **Music Player** web application built using **HTML**, **CSS**, and **Core JavaScript**. 
 <br>
 It allows users to upload their own downloaded songs, store them in the browser using IndexedDB, and play them through a smooth, user-friendly interface.
 
