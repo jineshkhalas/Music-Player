@@ -94,8 +94,6 @@ li>a {
 
 .dropdown-content {
     display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
     flex-direction: column;
     position: absolute;
     top: 78%;
@@ -107,7 +105,8 @@ li>a {
     background-color: #a5acb9;
     height: max-content;
 }
-.dropdown-content > a{
+
+.dropdown-content>a {
     width: 100%;
     padding: 5% 5%;
     font-size: 120%;
@@ -115,9 +114,11 @@ li>a {
     color: #111826;
     text-decoration: none;
 }
-.dropdown-content a:hover{
+
+.dropdown-content a:hover {
     background-color: #858587;
 }
+
 .menu-btn {
     font-size: 200%;
     background: none;
@@ -161,7 +162,6 @@ ul {
 li {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     flex-direction: row;
 }
 
@@ -178,7 +178,6 @@ li {
 
 .song {
     width: 90%;
-    /* margin-bottom: 2%; */
     font-size: 130%;
     font-family: "Text Me One", sans-serif;
     color: aliceblue;
@@ -200,7 +199,7 @@ li {
     font-size: 120%;
 }
 
-.delete-btn{
+.delete-btn {
     background: none;
     border: none;
     outline: none;
@@ -225,17 +224,13 @@ li {
         margin-bottom: 2%;
     }
 
-    .header-nav {
+    .header-nav,
+    .songs-ul>li {
         width: 100%;
     }
 
     .songs-container {
         width: 90%;
-    }
-
-    .songs-ul>li {
-        width: 100%;
-
     }
 
     .song {
@@ -252,11 +247,13 @@ li {
         visibility: collapse;
         display: none;
     }
+
     .head-dropdown {
         visibility: visible;
         display: block;
     }
-    .songs-heading{
+
+    .songs-heading {
         font-size: 180%;
     }
 }
@@ -278,28 +275,29 @@ li {
 
     }
 
-    .song, .icon {
+    .song,
+    .icon {
         font-size: 90%;
     }
 }
 
-@media only screen and (max-width: 460px){
-    .songs-container {
-        width: 100%;
-    }
+@media only screen and (max-width: 460px) {
 
+    .songs-container,
     .songs-ul>li {
         width: 100%;
-
     }
 
-    .song, .icon {
+    .song,
+    .icon {
         font-size: 70%;
     }
-    .icon{
+
+    .icon {
         margin: 0.5% 2%;
     }
-    .delete-btn{
-    font-size: 60%;
-}
+
+    .delete-btn {
+        font-size: 60%;
+    }
 }

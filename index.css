@@ -94,7 +94,8 @@ li>a {
     background-color: #a5acb9;
     height: max-content;
 }
-.dropdown-content > a{
+
+.dropdown-content>a {
     width: 100%;
     padding: 5% 5%;
     font-size: 120%;
@@ -103,9 +104,10 @@ li>a {
     text-decoration: none;
 }
 
-.dropdown-content a:hover{
+.dropdown-content a:hover {
     background-color: #858587;
 }
+
 .menu-btn {
     font-size: 200%;
     background: none;
@@ -258,28 +260,6 @@ canvas {
     height: 100px;
 }
 
-/* @media only screen and (min-width: 1600px) {
-    .content-head {
-        font-size: 350%;
-    }
-
-    #controls {
-        width: 60%;
-    }
-
-    #songTitle {
-        font-size: 200%;
-    }
-
-    #seekbar,
-    .control-btn-container {
-        width: 60%;
-    }
-
-    .control-btns {
-        font-size: 140%;
-    }
-} */
 
 @media only screen and (max-width: 1400px) {
     #audio-control {
@@ -342,10 +322,7 @@ canvas {
         flex-direction: column-reverse;
     }
 
-    .input-section {
-        width: 70%;
-    }
-
+    .input-section,
     .audio-section {
         width: 70%;
     }
@@ -428,10 +405,7 @@ canvas {
         font-size: 100%;
     }
 
-    .control-btns {
-        font-size: 80%;
-    }
-
+    .control-btns,
     .note {
         font-size: 80%;
     }
@@ -456,18 +430,9 @@ canvas {
         margin-bottom: 6%;
     }
 
-    .audio-section {
-        width: 90%;
-    }
-
-    #audio-control {
-        width: 90%;
-    }
-
-    #seekbar {
-        width: 90%;
-    }
-
+    .audio-section,
+    #audio-control,
+    #seekbar,
     .control-btn-container {
         width: 90%;
     }
