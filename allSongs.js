@@ -115,6 +115,14 @@ function loadSongsFromDB() {
             playPauseDiv.classList.add("playpause-btn");
             playPauseDiv.textContent = "▶️";
 
+            const deleteBtn = document.createElement("button");
+            deleteBtn.classList.add("delete-btn");
+            deleteBtn.textContent = "🗑️";
+            deleteBtn.addEventListener("click", (e) => {
+                e.stopPropagation(); // Prevent play/pause when clicking delete
+                deleteSong(song.id);
+            });
+
             songDiv.addEventListener("click", () => {
                 if (currentlyPlayingId === song.id && !audio.paused) {
                     audio.pause();
@@ -146,8 +154,25 @@ function loadSongsFromDB() {
             songDiv.appendChild(playPauseDiv);
             li.appendChild(icon);
             li.appendChild(songDiv);
+            li.appendChild(deleteBtn);
 
             songsContainer.appendChild(li);
         });
     };
 };
+
+function deleteSong(id) {
+    const txn = db.transaction("songs", "readwrite");
+    const store = txn.objectStore("songs");
+
+    const request = store.delete(id);
+
+    request.onsuccess = () => {
+        console.log(`Deleted song with id: ${id}`);
+        loadSongsFromDB(); // Refresh UI
+    };
+
+    request.onerror = () => {
+        console.error("Failed to delete song");
+    };
+}

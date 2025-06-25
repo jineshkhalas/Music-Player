@@ -200,6 +200,15 @@ li {
     font-size: 120%;
 }
 
+.delete-btn{
+    background: none;
+    border: none;
+    outline: none;
+    height: max-content;
+    margin: 2%;
+    font-size: 70%;
+}
+
 
 @media only screen and (max-width: 1250px) {
     .header-nav {
@@ -290,4 +299,7 @@ li {
     .icon{
         margin: 0.5% 2%;
     }
+    .delete-btn{
+    font-size: 60%;
+}
 }
